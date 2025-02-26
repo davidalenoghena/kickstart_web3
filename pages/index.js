@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import factory from '../ethereum/factory';
-import { Card, Button } from 'semantic-ui-react';
-import 'semantic-ui-css/semantic.min.css';
-import Layout from '../components/Layout';
+import React, { Component } from "react";
+import factory from "../ethereum/factory";
+import { Card, Button } from "semantic-ui-react";
+import "semantic-ui-css/semantic.min.css";
+import Layout from "../components/Layout";
 
 class CampaignIndex extends Component {
     static async getInitialProps() {
@@ -12,11 +12,11 @@ class CampaignIndex extends Component {
     }
 
     renderCampaigns() {
-        const items = this.props.campaigns.map(address => {
+        const items = this.props.campaigns.map((address) => {
             return {
                 header: address,
                 description: <a>View Campaign</a>,
-                fluid: true
+                fluid: true,
             };
         });
 

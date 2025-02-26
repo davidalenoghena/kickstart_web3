@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import { Container } from 'semantic-ui-react';
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import { Container } from "semantic-ui-react";
 
-export default props => {
+export default (props) => {
     return (
         <Container>
             <Head>
