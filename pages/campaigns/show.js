@@ -73,6 +73,15 @@ class CampaignShow extends Component {
                     <Grid.Column width={6}>
                         <ContributeForm address={this.props.address} />
                     </Grid.Column>
+                    <Grid.Row>
+                        <Grid.Column>
+                            <Link route={`/`}>
+                                <a>
+                                    <Button primary>Back</Button>
+                                </a>
+                            </Link>
+                        </Grid.Column>
+                    </Grid.Row>
                 </Grid>
             </Layout>
         );
