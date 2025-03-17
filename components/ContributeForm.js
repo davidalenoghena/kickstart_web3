@@ -4,7 +4,6 @@ import web3 from "../ethereum/web3";
 import Router from "next/router";
 
 import Campaign from "../ethereum/campaign";
-import { Router as route } from "../routes";
 
 class ContributeForm extends React.Component {
     state = {
