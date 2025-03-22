@@ -13,6 +13,15 @@ class RequestRow extends Component {
         });
     };
 
+    onFinalize = async () => {
+        const { id, address } = this.props;
+        const campaign = Campaign(address);
+        const accounts = await web3.eth.getAccounts();
+        await campaign.methods.finalizeRequest(id).send({
+            from: accounts[0]
+        });
+    };
+
     render() {
         const { Row, Cell } = Table;
         const { id, request, approversCount } = this.props;
@@ -26,6 +35,9 @@ class RequestRow extends Component {
                 <Cell>{request.approvalCount}/{approversCount}</Cell>
                 <Cell>
                     <Button color="green" basic onClick={this.onApprove}>Approve</Button>
+                </Cell>
+                <Cell>
+                    <Button color="red" basic onClick={this.onFinalize}>Finalize</Button>
                 </Cell>
             </Row>
         );
